@@ -1,7 +1,7 @@
 ﻿-- After the datasets are uploaded, add the Lat/Lng of its centroid, and its W/S/E/N bounding box, in WGS84.
 -- This is used extensively for zooming the map, and for client-side distance calculation.
 -- For cm_trails, also add the geometry's length, which is used later for calculating a human-readable length.
-
+delete from cm_use_areas where app = '0';
 alter table cm_use_areas add column lat float;
 alter table cm_use_areas add column lng float;
 alter table cm_use_areas add column lat_dms varchar(15);
